@@ -1,0 +1,33 @@
+[plugin]
+id = "jupyter_notebook"
+name = "Jupyter Notebook"
+description = "Jupyter Notebook 集成插件：支持代码单元执行、markdown 笔记编辑、结果查看与中文化 Web UI。Web UI: http://127.0.0.1:48916/plugin/jupyter_notebook/ui/"
+version = "0.1.0"
+entry = "plugin.plugins.jupyter_notebook:JupyterNotebookPlugin"
+
+[plugin.author]
+name = "N.E.K.O Team"
+
+[plugin.sdk]
+recommended = ">=0.1.0,<0.2.0"
+supported = ">=0.1.0,<0.3.0"
+
+[plugin_runtime]
+enabled = true
+auto_start = true
+
+[plugin.store]
+enabled = false
+
+[jupyter_notebook]
+kernel_name = "python3"
+execution_timeout_sec = 240
+bootstrap_timeout_sec = 420
+auto_setup_env = true
+auto_install_deps = true
+push_priority = 6
+push_content_updates = false
+push_to_chat_model = true
+max_event_queue = 1000
+prewarm_kernel = true
+shared_kernel = true
